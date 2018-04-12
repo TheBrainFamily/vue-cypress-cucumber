@@ -1,6 +1,6 @@
 /* global given, when, then */
 console.log('Hello');
-given('I am on the "/" page', () => {
+given('I am on the {string} page', () => {
   cy.visit('/');
 })
 
