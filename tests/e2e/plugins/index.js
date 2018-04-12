@@ -1,6 +1,9 @@
 // https://docs.cypress.io/guides/guides/plugins-guide.html
+const cucumber = require('cypress-cucumber-preprocessor').default
 
 module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
+
   return Object.assign({}, config, {
     fixturesFolder: 'tests/e2e/fixtures',
     integrationFolder: 'tests/e2e/specs',
